@@ -66,6 +66,7 @@ export function counter(expression, userSelect) {
     if (userSelect === null) {
         newNegPoint += 1;
         nPoint.textContent = newNegPoint;
+        readyNewPanel(newNegPoint, newPozPoint);
         init()
         return;
     }
@@ -75,10 +76,12 @@ export function counter(expression, userSelect) {
     if (userAnswer === expression) {
         newPozPoint++;
         pPoint.textContent = newPozPoint;
+        readyNewPanel(newNegPoint, newPozPoint);
         init()
     } else {
         newNegPoint++;
         nPoint.textContent = newNegPoint;
+        readyNewPanel(newNegPoint, newPozPoint);
         init()
     }
 }
