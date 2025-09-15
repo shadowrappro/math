@@ -1,0 +1,419 @@
+/* BALOO 2 */
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('/Baloo2-SemiBold.woff2') format('woff2'),
+        url('Baloo2-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('/fonts/Baloo2-Medium.woff2') format('woff2'),
+        url('/fonts/Baloo2-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('/fonts/Baloo2-Bold.woff2') format('woff2'),
+        url('/fonts/Baloo2-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* FIRA SANS */
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('/fonts/FiraSans-Bold.woff2') format('woff2'),
+        url('/fonts/FiraSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('/fonts/FiraSans-BoldItalic.woff2') format('woff2'),
+        url('/fonts/FiraSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('/fonts/FiraSans-Medium.woff2') format('woff2'),
+        url('/fonts/FiraSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('/fonts/FiraSans-MediumItalic.woff2') format('woff2'),
+        url('/fonts/FiraSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* orqa fon bo‘lishi uchun */
+}
+
+/* FIRST PANEL */
+
+.first-panel {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: 3;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out; 
+    background-image: url("/images/for-first-panel.jpg"); 
+    background-size: cover;           
+    background-position: center;      
+    background-repeat: no-repeat;     
+}
+
+.first-title {
+    font-family: 'Baloo 2';
+    font-weight: bold;
+    font-size: 90px;    
+    color: #f1f5f9;
+}
+
+.first-content {
+    font-family: 'Baloo 2';
+    font-weight: 800;
+    font-size: 45px;
+    text-align: center;
+    max-width: 800px; 
+    letter-spacing: 1px;
+    line-height: 35px;   
+    margin-bottom: 35px;
+    color: #facc15;
+}
+
+.first-button {
+    padding: 20px;
+    color: rgb(0, 153, 255);
+    font-family: 'Fira Sans';
+    font-weight: bold;
+    font-size: 20px;
+    border: solid white 4px;
+    border-radius: 40px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.first-button:hover {
+    color: white;
+    background-color: rgb(0, 153, 255);
+    transition: 0.7s ease;
+}
+
+.first-panel.hide {
+  transform: translateY(-100%);
+}
+
+/* RULES PANEL */
+
+.rules-panel {
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(253, 103, 103); */
+    background-image: url("/images/for-rules.jpg"); 
+    background-size: cover;           
+    background-position: center;      
+    background-repeat: no-repeat;     
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    opacity: 0;              /* boshida ko‘rinmasin */
+    pointer-events: none;    /* tugmalar bosilmasin */
+}
+
+.rules-title {
+    color: #faf615;
+    font-family: "Fira Sans";
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.rules-content {
+    color: #faf615;
+    font-family: "Fira Sans";
+    width: 800px;
+    font-size: 30px;
+    font-weight: 800;
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.rules-button {
+    padding: 20px;
+    color: black;
+    font-family: 'Baloo 2';
+    font-weight: bold;
+    font-size: 20px;
+    border: solid white 4px;
+    border-radius: 40px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.rules-button:hover {
+    color: white;
+    background-color: rgba(1, 105, 65, 0.363);;
+    transition: 0.7s ease;
+}
+
+.rules-panel.hide {
+  transform: translateY(100%);
+}
+
+.hidden {
+    display: none;
+}
+
+.rules-panel.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Numbers span */
+.number-span {
+    position: relative;
+    top: 10%;
+    font-size: 25px;
+    font-family: "Fira Sans";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: solid orange 3px;
+    border-radius: 8px;
+}
+
+.number-span:hover {
+    background-color: white;
+    color: black;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+
+.numbers-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Main Panels */
+.main-panels {
+    display: flex;
+    background-color: rgba(128, 0, 128, 0.377);
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 930px;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    padding: 50px;
+    align-items: center;
+}
+
+.random-misol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    width: 700px;
+    height: 200px;
+    gap: 10px;
+}
+
+.a-soni {
+    font-size: 90px;
+    font-family: 'Fira Sans';
+    font-weight: bold;
+    color: rgb(78, 69, 69);
+}
+
+.b-soni {
+    font-size: 90px;
+    font-family: 'Fira Sans';
+    font-weight: bold;
+    color: rgb(78, 69, 69);
+}
+
+.amal {
+    font-size: 90px;
+    font-family: 'Fira Sans';
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 80px;
+}
+
+.nPoint {
+    background-color: rgb(88, 88, 255);
+    color: white;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 60px;
+    font-family: 'Baloo 2';
+    font-weight: bold;
+}
+
+.pPoint {
+    background-color: rgb(88, 88, 255);
+    color: white;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-family: 'Baloo 2';
+    font-weight: bold;
+}
+
+.sTimer {
+    padding-right: 60px;
+    padding-left: 60px;
+    font-size: 35px;
+    font-family: "Fira Sans";
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+}
+
+.randomise-content {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 600px;
+    padding-left: 60px;
+    margin-top: -35px;
+    padding-right: 20px;
+}
+
+.yourPoint {
+    color: rgb(124, 41, 41);
+    font-family: "Fira Sans";
+    font-size: 30px;
+    margin-left: -20px;
+}
+
+.seTimer {
+    color: rgb(124, 41, 41);
+    font-family: "Fira Sans";
+    font-size: 30px;
+    margin-left: -10px;
+}
+
+.negativePoint {
+    color: rgb(124, 41, 41);
+    font-family: "Fira Sans";
+    font-size: 30px;
+    position: relative;
+    right: -20px;
+}
+
+/* Lose panel */
+
+.lose-panel {
+    background-color: skyblue;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lose-title {
+    font-size: 120px;
+    font-family: "Baloo 2";
+    color: white;
+}
+
+.lose-reset-link {
+    cursor: pointer;
+    font-size: 40px;
+    font-family: "Fira Sans";
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(148, 97, 3);
+    position: relative;
+}
+
+.lose-reset-link::before {
+    content: "";
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: white;
+    transition: 0.9s ease;
+}
+
+.lose-reset-link:hover::before {
+    width: 100%;
+}

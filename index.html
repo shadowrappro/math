@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math (BOTIRDEV)</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="first-panel" id="firstPanel">
+        <h2 class="first-title">
+            Hi Kid
+        </h2>
+
+        <p class="first-content">
+            FUNNY ARITHMETIC CAME FOR 3 - 10 ACED CHILDREN. PLAY AND CHECK YOUR SPEED OF THINKINC.
+        </p>
+    
+        <button id="start-button" class="first-button">
+            START GAME
+        </button>
+    </div>
+
+    <div class="rules-panel" id="rulesPanel">
+        <h2 class="rules-title">
+            GOODLUCK 😊
+        </h2>
+
+        <p class="rules-content">
+            'Note: If you will face with the sign "%", that means you should find the remainder of a division ex: 9 % 2 = 1 because 9 / 2 = 4 and the remainder is 1 ' <br><br>
+            "If you find 10 times correct answer, you will win." <br>
+            "You lose if there are mo…rs than correct answers"
+        </p>
+
+        <button class="rules-button" id="rulesButton">
+            CONTINUE
+        </button>
+    </div>
+
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="./videos/0914.mp4" type="video/mp4">
+        Sizning brauzeringiz video qo‘llab-quvvatlamaydi.
+    </video>
+
+    <div class="main-panels hidden">
+
+        <div>
+            <div class="random-misol">
+                <p class="a-soni" id="aSoni">-</p>
+                <p class="amal" id="cAmal">/</p>
+                <p class="b-soni" id="bSoni">-</p>
+            </div>
+
+            <div class="randomise-content">
+                <p class="yourPoint">WIN POINT</p>
+                <p class="seTimer">TIMER</p>
+                <p class="negativePoint">LOSE POINT</p>
+            </div>
+
+            <div class="main-content">
+                <p class="pPoint" id="pozPoint">0</p>
+                <p class="sTimer" id="setTimer"></p>
+                <p class="nPoint" id="negPoint">0</p>
+            </div>
+        </div>
+
+        <div id="numbersContainer" class="numbers-div"></div>
+    
+        <template id="numbersTemplate">
+            <span class="number-span"></span>
+        </template>
+    </div>
+
+    <script src="./js/app.js" type="module"></script>
+</body>
+</html>
